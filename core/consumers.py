@@ -98,9 +98,10 @@ class GeminiConsumer(AsyncWebsocketConsumer):
         pass
 
     async def receive(self, text_data=None, bytes_data=None):
-        if text_data:
+        if bytes_data is not None:
             try:
-                data = json.loads(text_data)
+                decoded = bytes_data.decode("utf-8")
+                data = json.loads(decoded)
                 if 'ingredients' not in data:
                     if 'image' not in data:
                         await self.send(text_data=json.dumps({
@@ -139,7 +140,7 @@ class GeminiConsumer(AsyncWebsocketConsumer):
                     
                     message = \
                         response.text.removeprefix("```json").removesuffix("```").strip() if 'json' in response.text else response.text
-                    
+                    print(f'message: {message}')
                     await self.send(text_data=json.dumps({
                         'status': 'success',
                         'message': message,
