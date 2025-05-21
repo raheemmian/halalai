@@ -1,0 +1,10 @@
+Django>=5.0
+channels>=4.0
+daphne>=4.0
+google-genai>=1.13.0
+pillow==11.2.1
+dj-rest-auth==7.0.1
+django-cors-headers>=4.7.0
+django-allauth==65.7.0
+djangorestframework==3.16.0
+PyJWT>=2.10.1

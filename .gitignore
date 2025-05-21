@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Django specific
+db.sqlite3
+*.sqlite3
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# Docker
+*.log
+*.pid
+*.seed
+*.bak
+*.swp
+*.swo
+
+# Pytest
+.cache/
+
+# MyPy
+.mypy_cache/
+
+# VS Code and IDEs
+.vscode/
+.idea/
+
+# Static and uploads (optional if built/generated)
+staticfiles/
+uploads/
+
+# Node (if used anywhere)
+node_modules/
+
